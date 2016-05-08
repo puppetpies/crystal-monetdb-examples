@@ -1,0 +1,12 @@
+name: crystal-monetdb-examples
+version: 0.1.0
+
+authors:
+  - Brian Hood <brianh6854@googlemail.com>
+
+development_dependencies:
+  crystal-monetdb-libmapi:
+    github: puppetpies/crystal-monetdb-libmapi
+    version: ">= 0.1.1"
+
+license: GPLv2
