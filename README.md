@@ -1,6 +1,7 @@
 MonetDB Example Project
 =======================
 
+make
 ./simple_query
 
 [brian@orville crystal-monetdb-examples]$ ./simple_query 
