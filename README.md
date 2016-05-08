@@ -2,8 +2,10 @@ MonetDB Example Project
 =======================
 
 make
+
 ./simple_query
 
+````
 [brian@orville crystal-monetdb-examples]$ ./simple_query 
 {"name":"Apple","price":"9.99","weight":"50","comments":"NULL","id":"1"}
 {"name":"Bananna","price":"3.99","weight":"30","comments":"NULL","id":"2"}
