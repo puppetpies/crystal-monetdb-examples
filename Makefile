@@ -1,5 +1,5 @@
 all: simple
 
 simple:
-	crystal build --release simple_query.cr -o simple_query
+	crystal compile --release src/simple_query.cr -o simple_query
 
