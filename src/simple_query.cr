@@ -14,18 +14,14 @@ username = "monetdb"
 password = "monetdb"
 db = "test"
 
-mero = MonetDB::ClientJSON.new
-mero.host = host
-mero.port = port
-mero.username = username
-mero.password = password
-mero.db = db
+conn = MonetDB::ClientJSON.new
+conn.connect(host, username, password, db) 
 
 myschema = "\"test\""
 query = "SELECT * FROM #{myschema}.fruits;"
-mero.connect
-result_json = mero.query_json(query)
-result = mero.json_to_hash(result_json)
+conn.connect
+result_json = conn.query_json(query)
+result = conn.json_to_hash(result_json)
 puts "Hash Created:".colorize(:red)
 p result
 puts "Display specific fields".colorize(:red)
@@ -35,8 +31,8 @@ result.each {|k,v|
 
 puts "Peach"
 query = "SELECT * FROM #{myschema}.fruits WHERE name = 'Peach';"
-result_json = mero.query_json(query)
-result = mero.json_to_hash(result_json)
+result_json = conn.query_json(query)
+result = conn.json_to_hash(result_json)
 puts "Hash Created:".colorize(:red)
 p result
 puts "Display specific fields".colorize(:red)
@@ -46,8 +42,8 @@ result.each {|k,v|
 
 puts "Collection of fruits of 9.99"
 query = "SELECT * FROM #{myschema}.fruits WHERE price = '9.99';"
-result_json = mero.query_json(query)
-result = mero.json_to_hash(result_json)
+result_json = conn.query_json(query)
+result = conn.json_to_hash(result_json)
 puts "Hash Created:".colorize(:red)
 p result
 puts "Display specific fields".colorize(:red)
@@ -59,8 +55,8 @@ dur = Timers.new
 dur.start
 puts "GUID test"
 query = "SELECT * FROM #{myschema}.guid_test;"
-result_json = mero.query_json(query)
-result = mero.json_to_hash(result_json)
+result_json = conn.query_json(query)
+result = conn.json_to_hash(result_json)
 puts "Hash Created:".colorize(:red)
 p result
 puts "Display specific fields".colorize(:red)

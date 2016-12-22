@@ -2,5 +2,5 @@ version: 1.0
 shards:
   crystal-monetdb-libmapi:
     github: puppetpies/crystal-monetdb-libmapi
-    commit: 84af62822662a74f9a37c69f481f436c89146964
+    commit: 0a14224cb3a1388d591837b0d4af6edd002f7e8c
 
